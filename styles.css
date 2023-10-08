@@ -1,0 +1,314 @@
+@import url("https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Lato:wght@100;300;400;700;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+main {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+    url("images/bg.jpg") center;
+  background-attachment: fixed;
+}
+section {
+  border-bottom: 1px solid rgb(224, 224, 224);
+}
+
+.expand {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 15px;
+  z-index: 1;
+}
+.expand i {
+  font-size: 50px;
+  color: white;
+}
+.expand i:hover {
+  cursor: pointer;
+  transition: 0.4s;
+  font-size: 45px;
+}
+.expand-banner.show {
+  visibility: visible;
+}
+.expand-banner {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.178);
+  color: black;
+}
+.expand-banner a {
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+.expand-banner a:hover {
+  color: grey;
+}
+
+.center {
+  text-align: center;
+}
+.center h1 {
+  letter-spacing: 2px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding-top: 300px;
+  font-size: 50px;
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 150px 0px 150px;
+}
+.logo {
+  letter-spacing: 10px;
+  color: white;
+  font-size: 30px;
+  font-family: "Annie Use Your Telescope", cursive;
+}
+.logo span {
+  color: red;
+}
+.links {
+  display: flex;
+  gap: 50px;
+}
+.links a {
+  text-decoration: none;
+  color: white;
+}
+.links a:hover {
+  color: black;
+}
+
+.about {
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 20px;
+}
+.about .title {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.about .title h1 {
+  font-size: 40px;
+}
+.about .title p {
+  margin-top: 20px;
+  width: 300px;
+}
+
+.goal {
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+  padding: 20px;
+}
+.goal .title {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.goal .title h1 {
+  font-size: 40px;
+}
+.goal .title p {
+  margin-top: 20px;
+  width: 300px;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  color: white;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.6s;
+  cursor: default;
+}
+.content:hover {
+  opacity: 1;
+}
+.team {
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 20px;
+}
+.team-title {
+  margin-top: 25px;
+  text-align: center;
+}
+.team-title h1 {
+  font-size: 40px;
+}
+
+.team-container {
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  width: 350px;
+  height: 350px;
+  text-align: center;
+}
+.team-info {
+  margin-top: 40px;
+}
+
+.team-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.team-container p {
+  width: 300px;
+  margin: auto;
+}
+.image {
+  width: 500px;
+  height: 300px;
+}
+.image img {
+  height: 100%;
+}
+
+.partners {
+  text-align: center;
+  padding: 20px;
+}
+
+.partners img {
+  height: 150px;
+}
+.logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.socials {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.socials i {
+  cursor: pointer;
+  font-size: 50px;
+  margin-right: 10px;
+  color: rgba(255, 255, 255, 0.379);
+}
+.socials i:hover {
+  color: white;
+}
+.socials h1 {
+  margin-top: 20px;
+  font-size: 15px;
+}
+
+.newsletter input {
+  padding: 10px;
+  outline: none;
+  border: none;
+}
+.newsletter button {
+  padding: 10px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: rgba(113, 230, 144, 0.532);
+  color: white;
+}
+.newsletter button:hover {
+  background-color: rgba(158, 212, 172, 0.532);
+}
+footer {
+  color: white;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  min-height: 10vh;
+  padding: 15px;
+}
+
+@media (width > 796px) {
+  .expand i {
+    display: none;
+  }
+}
+@media (width < 796px) {
+  .banner {
+    visibility: hidden;
+  }
+}
+@media (width < 945px) {
+  .partners img {
+    height: 60px;
+  }
+  .image {
+    width: 300px;
+    height: 200px;
+  }
+}
+@media (width < 786px) {
+  .about,
+  .goal,
+  .team {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .banner {
+    display: none;
+  }
+}
+@media (width <550px) {
+  footer {
+    flex-direction: column;
+  }
+  .socials i {
+    font-size: 30px;
+  }
+  .newsletter {
+    display: none;
+  }
+  .partners {
+    display: none;
+  }
+  .image {
+    display: flex;
+    justify-content: center;
+
+    width: 200px;
+    height: 150px;
+  }
+}
